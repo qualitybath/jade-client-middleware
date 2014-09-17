@@ -1,6 +1,6 @@
 # Jade Browser
 
-[![Jade Browser build status](https://travis-ci.org/qualitybath/jade-client-middleware.png)](https://travis-ci.org/qualitybath/jade-client-middleware)
+[![Jade Client Middleware build status](https://travis-ci.org/qualitybath/jade-client-middleware.png)](https://travis-ci.org/qualitybath/jade-client-middleware)
 
 
   Middleware for express/connect to expose jade templates to the web browser. It provides a few additional features like express-like render function with partial handling.
@@ -95,7 +95,7 @@ With those installed, running `npm install` and ''npm test'' will run the tests.
 
 (The MIT License)
 
-Copyright (c) 2009-2011 Storify &lt;info@storify.com&gt;
+Copyright (c) 2014 [http://www.qualitybath.com](http://www.qualitybath.com)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
