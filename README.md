@@ -1,4 +1,4 @@
-# Jade Browser
+# Jade Client Middleware
 
 [![Jade Client Middleware build status](https://travis-ci.org/qualitybath/jade-client-middleware.png)](https://travis-ci.org/qualitybath/jade-client-middleware)
 
