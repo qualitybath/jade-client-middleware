@@ -12,20 +12,6 @@ function toRegExp(str, begin, end){
   ((end) ? '$' : '');
 }
 
-function findRuntime(){
-  var runtime = path.join(__dirname, './node_modules/jade/runtime.js');
-  if (fs.existsSync(runtime)) {
-    return runtime;
-  }
-
-  runtime = path.join(__dirname, '../../jade/runtime.js');
-  if (fs.existsSync(runtime)) {
-    return runtime;
-  }
-
-  throw new Error('runtime.js not found');
-}
-
 module.exports = function(exportPath, patterns, options){
   options = options || {};
   exportPath = exportPath.replace(/\/$/,'');
@@ -44,7 +30,7 @@ module.exports = function(exportPath, patterns, options){
           'Content-Type': 'text/javascript'
       };
 
-  var runtime = fs.readFileSync(findRuntime(), 'utf8');
+  var runtime = fs.readFileSync(require.resolve('jade/runtime'), 'utf8');
   var render = fs.readFileSync(path.join(__dirname, 'render.js'), 'utf8');
 
   return function(req, res, next){
