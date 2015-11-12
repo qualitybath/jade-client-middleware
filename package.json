@@ -2,7 +2,7 @@
   "author": "Alex Friedman <afriedman@qualitybath.com>",
   "name": "jade-client-middleware",
   "description": "express/connect middleware that serves jade compiled templates to the browser",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "repository": {
     "url": "https://github.com/qualitybath/jade-client-middleware/"
   },
