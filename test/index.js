@@ -20,7 +20,7 @@ describe("jade browser", function(){
 
   it('create an object', function(done){
     expect(app).to.exist;
-    superagent.get(testhost).end(function(res){
+    superagent.get(testhost).end(function(err, res){
       expect(res.status).to.equal(200);
       expect(res.text.toString()).to.contain('<h1>test</h1>');
       expect(res.text.toString()).to.contain('template/test.jade"');
@@ -29,7 +29,7 @@ describe("jade browser", function(){
   });
 
   it('should include layout file', function(done){
-    superagent.get(testhost).end(function(res){
+    superagent.get(testhost).end(function(err, res){
       expect(res.text.toString()).to.contain('from layout');
       expect(res.text.toString()).to.contain('child stuff');
       done();
@@ -37,7 +37,7 @@ describe("jade browser", function(){
   });
 
   it('should render partials', function(done){
-    superagent.get(testhost).end(function(res){
+    superagent.get(testhost).end(function(err, res){
       expect(res.text.toString()).to.contain('from partial');
       done();
     });
